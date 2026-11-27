@@ -1,0 +1,512 @@
+
+/* ========================================
+   1. GENERAL PAGE STYLING
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #252525;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+}
+
+
+/* ========================================
+   2. TOP HEADER / MAIN NAVIGATION
+======================================== */
+
+.site-header {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 18px 5%;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#main-title {
+    color: #008a45;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.site-header ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.site-header ul a {
+    font-size: 13px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.site-header ul a:hover {
+    color: #008a45;
+}
+
+.site-header button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.new.customer.btn {
+    background-color: #008a45;
+    color: #ffffff;
+}
+
+.new.customer.btn:hover {
+    background-color: #006b35;
+}
+
+.help.btn {
+    background-color: #eeeeee;
+    color: #333333;
+}
+
+.help.btn:hover {
+    background-color: #dddddd;
+}
+
+.search-btn {
+    background-color: #ffffff;
+    color: #008a45;
+    border: 1px solid #008a45 !important;
+}
+
+.search-btn:hover {
+    background-color: #e8f5ed;
+}
+
+
+/* ========================================
+   3. SECOND NAVIGATION BAR
+======================================== */
+
+body > nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 18px 5%;
+    background-color: #008a45;
+    color: #ffffff;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-items ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.nav-items a {
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-items a:hover {
+    color: #d0f4d9;
+}
+
+.nav-items button {
+    padding: 11px 16px;
+    background-color: #ffffff;
+    color: #008a45;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.nav-items button:hover {
+    background-color: #e7f5eb;
+}
+
+
+/* ========================================
+   4. HERO SECTION
+======================================== */
+
+.hero-section {
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 75, 39, 0.95),
+            rgba(0, 138, 69, 0.72),
+            rgba(0, 138, 69, 0.25)
+        ),
+        linear-gradient(135deg, #006b35, #00a85a);
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    font-size: clamp(30px, 4vw, 48px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.hero-content button {
+    padding: 13px 28px;
+    background-color: #ffffff;
+    color: #008a45;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.hero-content button:hover {
+    background-color: #dff5e6;
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   5. POPULAR LINKS SECTION
+======================================== */
+
+.popular.links {
+    padding: 55px 5%;
+    background-color: #f5f8f6;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.popular.links > h3 {
+    grid-column: 1 / -1;
+    color: #008a45;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.items {
+    background-color: #ffffff;
+    padding: 25px 22px;
+    border-radius: 8px;
+    border: 1px solid #e6eee8;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.items:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.items h4 {
+    color: #008a45;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.items p {
+    padding: 9px 0;
+    color: #555555;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.items p:hover {
+    color: #008a45;
+}
+
+.items hr {
+    border: none;
+    border-top: 1px solid #e8e8e8;
+}
+
+
+/* ========================================
+   6. WHAT'S NEW SECTION
+======================================== */
+
+body > h2 {
+    margin-top: 55px;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    color: #008a45;
+    font-size: 32px;
+}
+
+body > p {
+    max-width: 850px;
+    margin: 0 auto 30px;
+    padding: 0 20px;
+    color: #666666;
+    font-size: 16px;
+}
+
+
+/* ========================================
+   7. IMAGE AND CONTENT CARDS
+======================================== */
+
+.card-section {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 28px;
+    padding: 25px 5% 55px;
+}
+
+.card1 {
+    min-width: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card1:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card-img {
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    background-color: #eaf3ed;
+}
+
+.card-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s ease;
+}
+
+.card1:hover .card-img img {
+    transform: scale(1.04);
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h3 {
+    color: #008a45;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.card-content p {
+    color: #666666;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.card-content a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #008a45;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.card-content a:hover {
+    background-color: #006b35;
+}
+
+
+/* ========================================
+   8. SERVICE HEADINGS AND LISTS
+======================================== */
+
+body > h2:not(:first-child) {
+    color: #008a45;
+}
+
+body > h3 {
+    margin: 12px 5%;
+    color: #333333;
+    font-size: 18px;
+}
+
+body > hr {
+    margin: 0 5%;
+    border: none;
+    border-top: 1px solid #e5e5e5;
+}
+
+
+/* ========================================
+   9. FOOTER
+======================================== */
+
+.site-footer {
+    padding: 28px 5%;
+    background-color: #004d2b;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+
+/* ========================================
+   10. RESPONSIVE DESIGN
+   For tablets and smaller screens
+======================================== */
+
+@media (max-width: 1000px) {
+    .site-header {
+        justify-content: center;
+    }
+
+    .site-header ul {
+        justify-content: center;
+    }
+
+    body > nav {
+        justify-content: center;
+    }
+
+    .nav-items {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .popular.links {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* ========================================
+   11. MOBILE PHONE STYLING
+======================================== */
+
+@media (max-width: 600px) {
+    .site-header {
+        padding: 20px 5%;
+    }
+
+    #main-title {
+        width: 100%;
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .site-header ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    body > nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-items {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .nav-items ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-section {
+        min-height: 400px;
+        padding: 50px 7%;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .popular.links {
+        grid-template-columns: 1fr;
+        padding: 40px 6%;
+    }
+
+    .popular.links > h3 {
+        font-size: 26px;
+    }
+
+    body > h2 {
+        font-size: 26px;
+        margin-top: 35px;
+    }
+
+    .card-section {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .card-img {
+        height: 220px;
+    }
+}
